@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td style="width: 100px"></td>
+            <td>From Currency</td>
+            <td style="width: 100px"></td>
+            <td>To Currency</td>
+            <td style="width: 100px"></td>
+            <td style="width: 100px"></td>
+        </tr>
+        <tr>
+            <td><input type="number" id="dauvao" /></td>
+            <td style="width: 100px"></td>
+            <td>
+                <select name="" id="select1">
+                <option value="VND" style="width: 300px">VND</option>
+                <option value="USD" style="width: 300px">USD</option>
+                </select></td>
+            <td style="width: 100px"></td>
+            <td>
+                <select id="select2">
+                <option value="VND" style="width: 300px">VND</option>
+                <option value="USD" style="width: 300px">USD</option>
+            </select>
+            </td>
+            <td style="width: 100px"></td>
+            <td>
+                <button onclick="getvalue()" style="background: mediumpurple">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <p style="color: blue">Result: <span id="result"></span></p>
+    <script>
+        function getvalue() {
+            let giatrivao = document.getElementById('dauvao').value;
+            let seclect1 = document.getElementById('select1').value;
+            let seclect2 = document.getElementById('select2').value;
+            if (seclect1==seclect2){
+                document.getElementById('result').innerHTML = giatrivao;
+            }
+            if (seclect1=="VND" && seclect2=="USD"){
+                document.getElementById('result').innerHTML = giatrivao/23000;
+            }
+            if (seclect1=="USD" && seclect2=="VND"){
+                document.getElementById('result').innerHTML = giatrivao*23000;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
