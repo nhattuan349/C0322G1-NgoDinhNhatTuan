@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td colspan="4"><input type="number" id="nhap1"/></td>
+    </tr>
+    <tr>
+        <td colspan="4"><input type="number" id="nhap2"/></td>
+    </tr>
+    <tr>
+        <td colspan="4"><p align="center" style="color: blue">=<span id="result"></span></p></td>
+     </tr>
+    <tr align="center">
+        <td><input type='button' value='+' name="+" onclick="cong()"/>  </td>
+        <td><input type='button' value='-' name="-" onclick="tru()"/> </td>
+        <td><input type='button' value='*' name="*" onclick="nhan()"/> </td>
+        <td><input type='button' value='/' name="/" onclick="chia()"/> </td>
+    </tr>
+<script>
+    function cong() {
+        let dauvao1=parseInt((document.getElementById("nhap1")).value);
+        let dauvao2=parseInt((document.getElementById("nhap2")).value);
+        {document.getElementById("result").innerHTML=dauvao1+dauvao2;}
+
+    }
+    function tru() {
+        let dauvao1=parseInt((document.getElementById("nhap1")).value);
+        let dauvao2=parseInt((document.getElementById("nhap2")).value);
+        {document.getElementById("result").innerHTML=dauvao1+dauvao2;}
+
+    }
+    function nhan() {
+        let dauvao1=parseInt((document.getElementById("nhap1")).value);
+        let dauvao2=parseInt((document.getElementById("nhap2")).value);
+        {document.getElementById("result").innerHTML=dauvao1*dauvao2;}
+
+    }
+    function chia() {
+        let dauvao1=parseInt((document.getElementById("nhap1")).value);
+        let dauvao2=parseInt((document.getElementById("nhap2")).value);
+        {document.getElementById("result").innerHTML=dauvao1/dauvao2;}
+    }
+</script>
+</table>
+</body>
+</html>
